@@ -8,6 +8,5 @@ sessionEnd="5M"
 contentType="json"
 randomTextUrl="urls.txt"
 
-# siege -v -i -c ${totalUser} -r ${requestTimeout} -t ${sessionEnd} -A ${userAgent} -T ${contentType} -H "Authorization:Bearer $accessToken" -f "$randomTextUrl"
-siege -v -i -c ${totalUser} -r ${requestTimeout} -t ${sessionEnd} -A ${userAgent} -T ${contentType} -f "$randomTextUrl"
-exit
+# siege -q -v -i -c ${totalUser} -r ${requestTimeout} -t ${sessionEnd} -A ${userAgent} -T ${contentType} -H "Authorization:Bearer $accessToken" -f "$randomTextUrl"
+siege -q -v -i -c ${totalUser} -r ${requestTimeout} -t ${sessionEnd} -A ${userAgent} -T ${contentType} -f "$randomTextUrl"
